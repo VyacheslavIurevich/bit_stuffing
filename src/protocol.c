@@ -24,7 +24,7 @@ int read_message(FILE *stream, void *buf) {
   first_marker_idx is index of the last bit of start marker
   end_marker_idx is index of the first bit of end marker
   cur_bit_num is a number of current bit */
-  uint8_t start_marker_idx, end_marker_idx, cur_bit_num = 0;
+  uint8_t start_marker_idx = 0, end_marker_idx = MAX_RECEIVE_LEN, cur_bit_num = 0;
 
   /* we will fill write_byte with new bits and ++byte_len
   until byte_len equals 8, then we write our byte
