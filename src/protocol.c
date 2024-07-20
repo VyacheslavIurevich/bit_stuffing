@@ -177,7 +177,8 @@ int read_message(FILE *stream, void *buf) {
     }
   }
   if (payload_counter % 8 != 0) {
-    fprintf(stderr, "Incorrect message, non-integer count of bits in payload \n");
+    fprintf(stderr,
+            "Incorrect message, non-integer count of bits in payload \n");
     return EOF;
   } else
     return payload_counter / 8;

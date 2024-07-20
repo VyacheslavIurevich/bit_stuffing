@@ -1,7 +1,7 @@
 #pragma once
 #include <inttypes.h>
-#include <stdio.h>
 #include <stddef.h>
+#include <stdio.h>
 #define MAX_MESSAGE_LEN 256
 /* maximum length of message that we receive from stream
 it consists of 7 prefix bits, 7 postfix bits, 2 markers
@@ -26,4 +26,4 @@ static uint8_t add_bit(uint8_t write_byte, uint8_t bit, uint8_t byte_len);
 
 int read_message(FILE *stream, void *buf);
 
-int write_message(FILE* stream, const void *buf, size_t nbyte);
+int write_message(FILE *stream, const void *buf, size_t nbyte);
